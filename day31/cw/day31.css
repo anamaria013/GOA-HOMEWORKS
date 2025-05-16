@@ -1,0 +1,90 @@
+/* 
+Class-ების გამოყენების უპირატესობები:
+
+1. მრავალჯერადი გამოყენება: Class-ები საშუალებას გაძლევთ გამოიყენოთ ერთი და იგივე სტილი 
+    სხვადასხვა ელემენტებზე, რაც ამცირებს კოდის დუბლირებას და ამარტივებს სტილების მართვას.
+
+2. მოქნილობა: Class-ები უფრო მოქნილია, ვიდრე ID-ები, რადგან ID-ები უნიკალურია და 
+    მხოლოდ ერთ ელემენტზე შეიძლება გამოყენება, ხოლო Class-ები შეიძლება გამოყენებულ იქნას 
+    მრავალ ელემენტზე.
+
+3. კოდის ორგანიზაცია: Class-ების გამოყენება ხელს უწყობს კოდის უკეთ ორგანიზებას და 
+    სტრუქტურირებას, რაც ამარტივებს პროექტის მხარდაჭერას და განვითარებას.
+
+4. სტილების გადაფარვა: Class-ები საშუალებას გაძლევთ მარტივად გადაფაროთ ან 
+    შეცვალოთ სტილები კონკრეტული ელემენტებისთვის, რაც ზრდის დიზაინის მოქნილობას.
+
+5. JavaScript-თან ინტეგრაცია: Class-ები ხშირად გამოიყენება JavaScript-ში ელემენტების 
+    იდენტიფიცირებისთვის და მათზე მოქმედებების შესასრულებლად, რაც ამარტივებს 
+    დინამიური ფუნქციონალის შექმნას.
+*/
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #f43333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+p {
+    color: #bc27d0;
+    margin: 10px 20px;
+    text-align: justify;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Layout styles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.heading {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.subheading {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.paragraph {
+    margin-bottom: 15px;
+}
+
+.image {
+    border: 2px solid #32f992;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#uniqueElement {
+     color: blue;
+     font-weight: bold;
+}
+
+
+.exampleClass {
+     color: rgb(188, 52, 237);
+     font-style: italic;
+}
+
+
+p {
+     color: rgb(42, 227, 51);
+     text-decoration: underline;
+}
