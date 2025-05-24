@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Methods Homework</title>
+</head>
+<body>
+<script>
+// 1) მომხმარებელს შემოატანინეთ მისი სახელი დიდი ასოებით და შეინახეთ ცვლადში სახელად name და .lower() ფუნქციის მეშვეობით გადააქციეთ ცვლადის მნიშვნელობა პატარა ასოებად.
+let name = prompt("შეიყვანეთ თქვენი სახელი (დიდი ასოებით):");
+let nameLower = name.toLowerCase();
+console.log("პატარა ასოებით:", nameLower);
+
+// 2) ცვლადში შეინახეთ თქვენი გვარი პატარა ასოებით, შემდეგ .upper() ფუნქციის მეშვეობით გადააქციეთ ცვლადის მნიშვნელობა დიდ ასოებად.
+let surname = "gogoladze";
+let surnameUpper = surname.toUpperCase();
+console.log("დიდი ასოებით:", surnameUpper);
+
+// 3) ცვლადში შეინახეთ სტრინგი პატარა ასოებით, შემდეგ .capitalize() ფუნქციის მეშვეობით გადააქციე პირველი ასო დიდ ასოდ.
+let word = "programming";
+let wordCapitalized = word.charAt(0).toUpperCase() + word.slice(1);
+console.log("პირველი ასო დიდი:", wordCapitalized);
+
+// 4) ცვლადში შეინახეთ რაიმე სტრინგი,შემდეგ find() ფუნქციის მეშვეობით იპოვეთ რომელ ინდექსზეა კონკრეტული ასო
+let text = "javascript";
+let index = text.indexOf("s");
+console.log("'s' ასოს ინდექსი:", index);
+
+// 5) შექმენით სია სტრინგით და თითოეული სტრინგი გადაიყვანეთ დიდ ასოებად for ციკლის მეშვეობით
+let fruits = ["apple", "banana", "cherry"];
+for (let i = 0; i < fruits.length; i++) {
+    fruits[i] = fruits[i].toUpperCase();
+}
+console.log("დიდი ასოებით სია:", fruits);
+</script>
+</body>
+</html>
