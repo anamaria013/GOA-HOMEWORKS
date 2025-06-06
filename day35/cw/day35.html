@@ -1,0 +1,39 @@
+<!-- 
+Inline CSS: სტილები, რომლებიც პირდაპირ HTML ელემენტში წერია style ატრიბუტის საშუალებით. მაგ: <p style="color: red;">ტექსტი</p>
+Internal CSS: სტილები, რომლებიც წერია <style> ტეგში, HTML დოკუმენტის <head> სექციაში.
+External CSS: სტილები, რომლებიც ცალკე .css ფაილშია და HTML დოკუმენტში <link> ტეგით ერთდება.
+
+უპირატესობას ვანიჭებ External CSS-ს, რადგან კოდი უფრო სუფთა, ორგანიზებული და მრავალჯერად გამოსაყენებელია.
+-->
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>CSS Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="main-heading">ეს არის პირველი სათაური</h1>
+    <h2 class="main-heading">ეს არის მეორე სათაური</h2>
+
+    <div class="photos">
+        <img src="https://via.placeholder.com/200" alt="ფოტო 1" class="photo red-border">
+        <img src="https://via.placeholder.com/200" alt="ფოტო 2" class="photo red-border">
+        <img src="https://via.placeholder.com/150" alt="ფოტო 3" class="photo purple-border">
+    </div>
+
+    <div class="paragraphs">
+        <p class="center blue">ეს არის პირველი პარაგრაფი</p>
+        <p class="center blue">ეს არის მეორე პარაგრაფი</p>
+        <p class="center blue">ეს არის მესამე პარაგრაფი</p>
+        <p class="center orange">ეს არის მეოთხე პარაგრაფი</p>
+        <p class="center orange">ეს არის მეხუთე პარაგრაფი</p>
+    </div>
+
+    <button id="btn1">ღილაკი 1</button>
+    <button id="btn2">ღილაკი 2</button>
+</body>
+</html>
