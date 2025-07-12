@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOA</title>
+    <style>
+        body {
+            background-color: #f0f4f8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2d3e50;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #1abc9c;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #2d3e50;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.08);
+        }
+        h1, h2, h3 {
+            color: #2d3e50;
+        }
+        .about, .projects, .contact {
+            margin-bottom: 40px;
+        }
+        .about {
+            background-color: #eafaf1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .projects {
+            background-color: #f9eaf3;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .project {
+            background: #fff;
+            border: 2px solid #1abc9c;
+            border-radius: 8px;
+            padding: 16px;
+            width: 30%;
+            min-width: 250px;
+            box-sizing: border-box;
+            transition: box-shadow 0.3s;
+        }
+        .project:hover {
+            box-shadow: 0 2px 12px rgba(52, 152, 219, 0.15);
+        }
+        .contact {
+            background-color: #eaf0fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #b2bec3;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 15px;
+            background-color: #1abc9c;
+            color: #fff;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #16a085;
+        }
+        footer {
+            background-color: #2d3e50;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0;
+            margin-top: 40px;
+        }
+        @media (max-width: 900px) {
+            .project-list {
+                flex-direction: column;
+            }
+            .project {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="main-title">GOA - ჩემი ვებსაიტი</h1>
+        <p style="font-size: 22px;">მოგესალმებით ჩემს პერსონალურ ვებსაიტზე!</p>
+    </header>
+    <nav>
+        <a href="#about">ჩემს შესახებ</a>
+        <a href="#projects">პროექტები</a>
+        <a href="#contact">კონტაქტი</a>
+    </nav>
+    <div class="container">
+        <section class="about" id="about">
+            <h2>ჩემს შესახებ</h2>
+            <p>
+                მე ვარ ვებ-დეველოპერი, რომელიც სწავლობს GOA-ში. მიყვარს პროგრამირება, ახალი ტექნოლოგიების შესწავლა და კრეატიული პროექტების შექმნა.
+                ჩემი მიზანია გავხდე პროფესიონალი დეველოპერი და შევქმნა ინოვაციური ვებსაიტები.
+            </p>
+            <ul>
+                <li>საყვარელი ენა: <span style="color: #e67e22;">Python</span></li>
+                <li>ჰობი: <span style="color: #2980b9;">გრაფიკული დიზაინი</span></li>
+                <li>საყვარელი ფერი: <span style="color: #1abc9c;">მწვანე</span></li>
+            </ul>
+        </section>
+        <section class="projects" id="projects">
+            <h2>ჩემი პროექტები</h2>
+            <div class="project-list">
+                <div class="project" id="proj1">
+                    <h3>პროექტი 1: პორტფოლიო</h3>
+                    <p>ეს არის ჩემი პირველი პორტფოლიო ვებსაიტი, სადაც განთავსებულია ჩემი ნამუშევრები და ინფორმაცია ჩემ შესახებ.</p>
+                </div>
+                <div class="project" id="proj2">
+                    <h3>პროექტი 2: კალკულატორი</h3>
+                    <p>ვებ-კალკულატორი, რომელიც ასრულებს ძირითად მათემატიკურ ოპერაციებს. გამოყენებულია HTML, CSS და JavaScript.</p>
+                </div>
+                <div class="project" id="proj3">
+                    <h3>პროექტი 3: ბლოგი</h3>
+                    <p>პერსონალური ბლოგი, სადაც ვწერ ტექნოლოგიებზე, პროგრამირებასა და ჩემს გამოცდილებაზე.</p>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h2>დამიკავშირდით</h2>
+            <form>
+                <label for="name">სახელი:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">ელ.ფოსტა:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">მესიჯი:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">გაგზავნა</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        &copy; 2024 GOA | შექმნილია სიყვარულით 💚
+    </footer>
+</body>
+</html>
