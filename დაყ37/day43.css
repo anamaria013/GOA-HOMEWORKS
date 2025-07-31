@@ -1,0 +1,98 @@
+/* 1) 6 different animal info sections with unique text-decoration styles */
+.animal1 {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #ff6347;
+    font-size: 18px;
+}
+.animal2 {
+    text-decoration-line: overline;
+    text-decoration-style: wavy;
+    text-decoration-color: #4682b4;
+    font-size: 18px;
+}
+.animal3 {
+    text-decoration-line: line-through;
+    text-decoration-style: double;
+    text-decoration-color: #32cd32;
+    font-size: 18px;
+}
+.animal4 {
+    text-decoration-line: underline overline;
+    text-decoration-style: dashed;
+    text-decoration-color: #ffa500;
+    font-size: 18px;
+}
+.animal5 {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #8a2be2;
+    font-size: 18px;
+}
+.animal6 {
+    text-decoration-line: overline;
+    text-decoration-style: solid;
+    text-decoration-color: #dc143c;
+    font-size: 18px;
+}
+
+/* 2) 6 paragraphs with different text-transform styles */
+.lowercase1, .lowercase2 {
+    text-transform: lowercase;
+}
+.uppercase1, .uppercase2 {
+    text-transform: uppercase;
+}
+.capitalize1, .capitalize2 {
+    text-transform: capitalize;
+}
+
+/* 3) 4 headings with different text-shadow and text-decoration */
+.heading1 {
+    color: #2e8b57;
+    text-shadow: 2px 2px 5px #aaa;
+    text-decoration: underline wavy #2e8b57;
+}
+.heading2 {
+    color: #b22222;
+    text-shadow: 3px 3px 8px #fbb;
+    text-decoration: overline double #b22222;
+}
+.heading3 {
+    color: #1e90ff;
+    text-shadow: 1px 4px 6px #99d;
+    text-decoration: underline dashed #1e90ff;
+}
+.heading4 {
+    color: #ff8c00;
+    text-shadow: 0 0 10px #ffb347;
+    text-decoration: line-through dotted #ff8c00;
+}
+
+/* 4) Two headings: name (underline), surname (overline) */
+.my-name {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #000;
+}
+.my-surname {
+    text-decoration-line: overline;
+    text-decoration-style: solid;
+    text-decoration-color: #000;
+}
+
+/*
+5) Text-decoration properties explained:
+
+text-decoration: shorthand for setting text-decoration-line, text-decoration-style, text-decoration-color, and text-decoration-thickness.
+
+text-decoration-line: Specifies what kind of line to use (underline, overline, line-through, or any combination).
+
+text-decoration-style: Sets the style of the line (solid, double, dotted, dashed, wavy).
+
+text-decoration-color: Sets the color of the decoration line.
+
+text-decoration-thickness: Sets the thickness of the decoration line (not supported in all browsers).
+
+text-shadow: Adds shadow to text (not part of text-decoration, but often used for text effects).
+*/
