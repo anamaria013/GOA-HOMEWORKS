@@ -1,0 +1,28 @@
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active {
+    color: green;
+}
+
+input:focus {
+    border: 2px solid blue;
+    background-color: #e0f7fa;
+}
+
+li:first-child {
+    font-weight: bold;
+    color: purple;
+}
+
+li:last-child {
+    font-style: italic;
+    color: orange;
+}
+
+li:nth-child(2) {
+    background-color: #ffe0b2;
+}
