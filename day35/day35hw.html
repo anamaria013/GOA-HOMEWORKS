@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Day35HW - Separate Tables</title>
+    <style>
+        :root{
+            --gap: 36px;
+            --card-w: 900px;
+        }
+        body{
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background:#f5f7fa;
+            padding:32px;
+            display:flex;
+            align-items:flex-start;
+            justify-content:center;
+        }
+
+        .container{
+            width:100%;
+            max-width:var(--card-w);
+        }
+
+        .table-card{
+            background:#fff;
+            border-radius:8px;
+            padding:18px;
+            box-shadow:0 6px 18px rgba(10,20,40,0.06);
+            margin-bottom:var(--gap);
+        }
+
+        .table-card h3{
+            margin:0 0 12px 0;
+            font-size:16px;
+            color:#222;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            font-size:14px;
+        }
+
+        th, td{
+            padding:10px 12px;
+            text-align:left;
+        }
+
+        /* 1 - Bright yellow header, green rows */
+        .t-yellow thead th{
+            background:#ffd400;
+            color:#111;
+            border-bottom:3px solid #e6c400;
+        }
+        .t-yellow tbody tr:nth-child(odd){ background:#e9f7d9; }
+        .t-yellow tbody tr:nth-child(even){ background:#d8f0b8; }
+
+        /* 2 - Dark green header with colored number column */
+        .t-dark thead th{
+            background:#17520a;
+            color:#fff;
+            text-align:center;
+        }
+        .t-dark tbody td{ background:#e9f7d9; }
+        .t-dark tbody td.number{
+            background:#7a1f03;
+            color:#fff;
+            width:120px;
+            text-align:center;
+        }
+
+        /* 3 - Clean modern, subtle lines, big sales column */
+        .t-modern th{ background:#121826; color:#fff; }
+        .t-modern td{ border-bottom:1px solid #e6e9ef; }
+        .t-modern td.amount{ text-align:right; font-weight:600; color:#0b3b66; }
+
+        /* 4 - Classic red header and thin borders */
+        .t-classic th{ background:#c21818; color:#fff; }
+        .t-classic, .t-classic th, .t-classic td{ border:1px solid #e9bcbc; }
+        .t-classic th, .t-classic td{ border-collapse:collapse; }
+
+        /* 5 - Simple database-style with muted header */
+        .t-db thead th{
+            background:#e6f0f8;
+            color:#123345;
+            font-size:13px;
+            text-transform:uppercase;
+        }
+        .t-db td{ background:#fff; border-bottom:1px solid #f0f4f8; font-family:monospace; }
+
+        /* small responsive tweaks */
+        @media (max-width:640px){
+            body{ padding:16px; }
+            .table-card{ padding:12px; }
+            th, td{ padding:8px; font-size:13px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Table 1 -->
+        <div class="table-card">
+            <h3>Employees (Bright)</h3>
+            <table class="t-yellow">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>James</td><td>Jeo</td><td>CEO</td><td>$135,000</td></tr>
+                    <tr><td>Kate</td><td>Harns</td><td>Designer</td><td>$100,000</td></tr>
+                    <tr><td>Ryan</td><td>Brian</td><td>Team Leader</td><td>$78,000</td></tr>
+                    <tr><td>Wesely</td><td>Prcnic</td><td>Author</td><td>$50,000</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table 2 -->
+        <div class="table-card">
+            <h3>Contacts (Green with Number)</h3>
+            <table class="t-dark">
+                <thead>
+                    <tr>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>California</td><td>Los Angeles</td><td class="number">745845</td></tr>
+                    <tr><td>Berlın</td><td>Berlin</td><td class="number">514254</td></tr>
+                    <tr><td>New Delhi</td><td>Delhi</td><td class="number">854874</td></tr>
+                    <tr><td>Karanchi</td><td>Karachi</td><td class="number">658243</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table 3 -->
+        <div class="table-card">
+            <h3>Sales Overview (Modern)</h3>
+            <table class="t-modern">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Region</th>
+                        <th>Sales</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Software License</td><td>North</td><td class="amount">$50,000.00</td></tr>
+                    <tr><td>Support</td><td>West</td><td class="amount">$10,000.00</td></tr>
+                    <tr><td>Consulting</td><td>East</td><td class="amount">$85,000.00</td></tr>
+                    <tr><td>Training</td><td>South</td><td class="amount">$56,000.00</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table 4 -->
+        <div class="table-card">
+            <h3>Address List (Classic)</h3>
+            <table class="t-classic">
+                <thead>
+                    <tr>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>Pin Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Kurla village</td><td>Mumbai</td><td>400097</td></tr>
+                    <tr><td>Andheri</td><td>Mumbai</td><td>400053</td></tr>
+                    <tr><td>Gandhi nagar market</td><td>Mumbai</td><td>400049</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table 5 -->
+        <div class="table-card">
+            <h3>DB Fields (Simple)</h3>
+            <table class="t-db">
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Type</th>
+                        <th>Allow Null</th>
+                        <th>Primary Key</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>id</td><td>int(11)</td><td>no</td><td>yes</td></tr>
+                    <tr><td>video</td><td>varchar(100)</td><td>no</td><td>no</td></tr>
+                    <tr><td>description</td><td>varchar(500)</td><td>no</td><td>no</td></tr>
+                    <tr><td>thumbnail</td><td>varchar(100)</td><td>no</td><td>no</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>

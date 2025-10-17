@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-classes Example</title>
+    <style>
+        a {
+            color: #0077cc;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #ff6600; 
+        }
+
+       
+        button {
+            background-color: #eeeeee;
+            border: 2px solid #0077cc;
+            color: #333;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        button:active {
+            background-color: #0077cc; 
+            border-color: #ff6600;     
+            color: #fff;
+        }
+         a:visited {
+            color: #800080; 
+        }
+        a:hover {
+            color: #008000; 
+        }
+          .active-link:active {
+            color: #ff0000;
+            font-size: 24px;
+            background-color: #ffff99;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.facebook.com/">facebook </a>
+    <br><br>
+    <button>დააჭირე მე</button>
+    <a href="https://www.google.com/" class="active-link">Google</a>
+</body>
+</html>
