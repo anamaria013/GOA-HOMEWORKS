@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>QR Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --bg:#e6f3fa;
+            --card:#ffffff;
+            --blue:#2f8ef9;
+            --muted:#6b7280;
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0;
+            font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+            background:linear-gradient(180deg,var(--bg),#e9f5fb 60%);
+            display:grid;
+            place-items:center;
+        }
+
+        .card{
+            width:320px;
+            background:var(--card);
+            border-radius:14px;
+            padding:26px 22px 20px;
+            box-shadow: 0 18px 40px rgba(27,40,65,0.10);
+            text-align:center;
+        }
+
+        .qr-wrap{
+            width:150px;
+            height:150px;
+            margin:0 auto 18px;
+            background:var(--blue);
+            border-radius:10px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            box-shadow: 0 8px 18px rgba(47,142,249,0.12), inset 0 -6px 12px rgba(255,255,255,0.05);
+            padding:10px;
+        }
+
+        /* Simple QR-like SVG sits centered */
+        .qr-svg{ width:120px; height:120px; display:block; }
+
+        h3{
+            margin:0 0 8px;
+            font-size:15px;
+            line-height:1.25;
+            color:#0f1724;
+            font-weight:700;
+        }
+
+        p{
+            margin:0;
+            color:var(--muted);
+            font-size:12px;
+            line-height:1.4;
+            max-width:230px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        /* small floating shadow under card for separation */
+        .card::after{
+            content:"";
+            position:absolute;
+            width:220px;
+            height:20px;
+            background:radial-gradient(ellipse at center, rgba(20,30,50,0.12), transparent);
+            border-radius:50%;
+            transform:translateY(172px);
+            left:50%;
+            margin-left:-110px;
+            pointer-events:none;
+            filter:blur(8px);
+            opacity:0.9;
+        }
+
+        /* responsive smaller screens */
+        @media (max-width:360px){
+            .card{width:88%}
+        }
+    </style>
+</head>
+<body>
+    <div class="card" role="region" aria-label="QR card">
+        <div class="qr-wrap" aria-hidden="true">
+            <svg class="qr-svg" viewBox="0 0 120 120" xmlns="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/cybxdhr4wewlscvco9dd.jpg" role="img" aria-hidden="true">
+                <!-- finder-like squares -->
+                <rect x="6" y="6" width="26" height="26" rx="3" fill="#fff"/>
+                <rect x="12" y="12" width="14" height="14" rx="2" fill="#2f8ef9"/>
+                <rect x="88" y="6" width="26" height="26" rx="3" fill="#fff"/>
+                <rect x="94" y="12" width="14" height="14" rx="2" fill="#2f8ef9"/>
+                <rect x="6" y="88" width="26" height="26" rx="3" fill="#fff"/>
+                <rect x="12" y="94" width="14" height="14" rx="2" fill="#2f8ef9"/>
+
+                
+                <g fill="#fff">
+                    <rect x="36" y="10" width="6" height="6"/>
+                    <rect x="48" y="10" width="6" height="6"/>
+                    <rect x="60" y="10" width="6" height="6"/>
+
+                    <rect x="36" y="22" width="6" height="6"/>
+                    <rect x="48" y="22" width="6" height="6"/>
+                    <rect x="60" y="22" width="6" height="6"/>
+
+                    <rect x="36" y="34" width="6" height="6"/>
+                    <rect x="48" y="34" width="6" height="6"/>
+                    <rect x="60" y="34" width="6" height="6"/>
+
+                    <rect x="78" y="36" width="6" height="6"/>
+                    <rect x="90" y="36" width="6" height="6"/>
+                    <rect x="78" y="48" width="6" height="6"/>
+                    <rect x="90" y="48" width="6" height="6"/>
+
+                    <rect x="18" y="60" width="6" height="6"/>
+                    <rect x="30" y="60" width="6" height="6"/>
+                    <rect x="42" y="60" width="6" height="6"/>
+                    <rect x="54" y="60" width="6" height="6"/>
+                    <rect x="66" y="60" width="6" height="6"/>
+                    <rect x="78" y="60" width="6" height="6"/>
+
+                    <rect x="18" y="72" width="6" height="6"/>
+                    <rect x="30" y="72" width="6" height="6"/>
+                    <rect x="42" y="72" width="6" height="6"/>
+                    <rect x="54" y="72" width="6" height="6"/>
+                    <rect x="66" y="72" width="6" height="6"/>
+                    <rect x="78" y="72" width="6" height="6"/>
+
+                    <rect x="36" y="84" width="6" height="6"/>
+                    <rect x="48" y="84" width="6" height="6"/>
+                    <rect x="60" y="84" width="6" height="6"/>
+                </g>
+            </svg>
+        </div>
+
+        <h3>Improve your front-end skills by building projects</h3>
+        <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+    </div>
+</body>
+</html>

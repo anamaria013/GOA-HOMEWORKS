@@ -1,0 +1,29 @@
+body{
+    background-color: hsl(225, 36%, 79%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+button{
+    background-color:hsl(245, 75%, 52%) ;
+    border-radius: 20px;
+    color: white;
+}
+
+.la{
+    color: hsl(227, 8%, 44%);
+}
+
+.card{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+img{
+    border-radius: 20px 20px 0 0;
+}
+
+

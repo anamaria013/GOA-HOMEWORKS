@@ -1,0 +1,59 @@
+body{
+    font-family: 'Overpass', sans-serif;
+    background-color: hsl(0, 0%, 14%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.lang{
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+.sanction{
+    color: hsl(217, 12%, 63%);
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    border-radius: 40px;
+}
+.card{
+    background-color: hsl(210, 11%, 11%);
+    width: 320px;
+    height: 330px;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+h1{
+    color: white;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+p{
+    color: hsl(217, 12%, 63%);
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+
+
+
+

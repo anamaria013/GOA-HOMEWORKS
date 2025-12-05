@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ka">
+<head>
+    <meta charset="utf-8" />
+    <title>Day37 HW - Flexbox პრაქტიკა</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+        :root{
+            --bg:#f6f8fa;
+            --card:#fff;
+            --accent:#4f46e5;
+            --muted:#94a3b8;
+        }
+        *{box-sizing:border-box}
+        body{
+            margin:20px;
+            font-family: Inter, Roboto, Arial, sans-serif;
+            background:var(--bg);
+            color:#0f172a;
+            -webkit-font-smoothing:antialiased;
+        }
+
+        h2{font-size:16px;margin:8px 0 6px;color:#0b1220}
+        p.lead{margin:0 0 12px;color:var(--muted);font-size:13px}
+
+        .example{
+            background:var(--card);
+            border:1px solid #e6e9ef;
+            padding:14px;
+            border-radius:8px;
+            margin-bottom:18px;
+            box-shadow:0 1px 0 rgba(15,23,42,0.03);
+        }
+
+        /* common container look */
+        .box-area{
+            border:1px dashed #e2e8f0;
+            height:140px;
+            display:flex;
+            padding:10px;
+            border-radius:6px;
+            background:linear-gradient(180deg, rgba(79,70,229,0.03), transparent);
+            gap:10px;
+            overflow:hidden;
+        }
+
+        .item{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:var(--accent);
+            color:white;
+            width:64px;
+            height:64px;
+            border-radius:6px;
+            font-weight:600;
+            box-shadow:0 2px 6px rgba(79,70,229,0.12);
+        }
+
+        /* task specific tweaks */
+        /* 1 */
+        .t1 .box-area{ flex-direction:row; justify-content:space-evenly; align-items:center; }
+        .t1 .item{ width:60px; height:60px; }
+
+        /* 2 */
+        .t2 .box-area{
+            flex-direction:column-reverse;
+            justify-content:flex-start; /* start of reversed column = bottom */
+            align-items:center;
+            height:200px;
+        }
+        .t2 .item{ width:90px; height:42px; border-radius:6px; background:#10b981; }
+
+        /* 3 */
+        .t3 .box-area{
+            flex-direction:row;
+            justify-content:center;
+            align-items:center;
+            height:160px;
+        }
+        .t3 .item{ width:72px; height:72px; background:#ef4444; }
+
+        /* 4 */
+        .t4 .box-area{
+            flex-direction:row;
+            align-items:baseline;
+            justify-content:flex-start;
+            height:120px;
+            gap:18px;
+            padding:18px;
+        }
+        .t4 .item{
+            width:auto;
+            min-width:40px;
+            height:auto;
+            background:transparent;
+            color:#0b1220;
+            font-weight:700;
+            box-shadow:none;
+            padding:0;
+        }
+        .t4 .small{ font-size:12px; }
+        .t4 .medium{ font-size:18px; }
+        .t4 .large{ font-size:32px; line-height:1; }
+
+        /* 5 */
+        .t5 .box-area{
+            flex-direction:row-reverse;
+            justify-content:flex-end;
+            align-items:flex-end;
+            height:140px;
+            padding:12px;
+        }
+        .t5 .item{ background:#06b6d4; width:56px; height:56px; }
+
+        /* small responsive */
+        @media (max-width:520px){
+            .box-area{height:160px}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="example t1">
+        <h2>დავალება 1 — მარჯვენიდან მარცხნივ თანაბრად (row, space-evenly, center)</h2>
+        <p class="lead">4 ყუთი გვერდიგვერდ, თანაბრად სივრცით და მშობლის ცენტრში.</p>
+        <div class="box-area" aria-label="task1">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+    </div>
+
+    <div class="example t2">
+        <h2>დავალება 2 — ქვემოდან ზემოთ (column-reverse, flex-start, center)</h2>
+        <p class="lead">3 ელემენტი მოდიან ქვედნიდან ზემოთ და განლაგებულია ჰორიზონტალურად ცენტრში.</p>
+        <div class="box-area" aria-label="task2">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+    </div>
+
+    <div class="example t3">
+        <h2>დავალება 3 — სრული ცენტრი (row, center, center)</h2>
+        <p class="lead">ყველა ელემენტი ზუსტად შუალედში, გვერდიგვერდ.</p>
+        <div class="box-area" aria-label="task3">
+            <div class="item">I</div>
+            <div class="item">II</div>
+            <div class="item">III</div>
+        </div>
+    </div>
+
+    <div class="example t4">
+        <h2>დავალება 4 — ტექსტის ხაზზე გასწორება (align-items: baseline)</h2>
+        <p class="lead">სიხშირის სხვადასხვა ზომის ტექსტები ერთ ხაზზე იკეკება.</p>
+        <div class="box-area" aria-label="task4">
+            <div class="item small">small</div>
+            <div class="item medium">medium text</div>
+            <div class="item large">BIG</div>
+            <div class="item medium">normal</div>
+        </div>
+    </div>
+
+    <div class="example t5">
+        <h2>დავალება 5 — მარჯვენიდან მარცხნივ, ბოლოში მიჭრილი (row-reverse, flex-end, flex-end)</h2>
+        <p class="lead">ელემენტები იწყებენ კონტეინერის მარჯვნივ და იწევიან მარცხნივ; ქვედა ნაწილია გამაერთიანებელი.</p>
+        <div class="box-area" aria-label="task5">
+            <div class="item">→</div>
+            <div class="item">→</div>
+            <div class="item">→</div>
+            <div class="item">→</div>
+        </div>
+    </div>
+
+</body>
+</html>
